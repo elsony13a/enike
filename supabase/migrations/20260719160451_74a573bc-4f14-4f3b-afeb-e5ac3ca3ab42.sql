@@ -1,0 +1,2 @@
+ALTER FUNCTION public.gen_app_id() SECURITY INVOKER;
+ALTER FUNCTION public.gen_secret_key() SECURITY INVOKER;

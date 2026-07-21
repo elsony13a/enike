@@ -1,0 +1,3 @@
+CREATE POLICY "Admins insert networks" ON public.ad_networks FOR INSERT TO authenticated WITH CHECK (public.has_role(auth.uid(), 'admin'::app_role));
+CREATE POLICY "Admins update networks" ON public.ad_networks FOR UPDATE TO authenticated USING (public.has_role(auth.uid(), 'admin'::app_role)) WITH CHECK (public.has_role(auth.uid(), 'admin'::app_role));
+CREATE POLICY "Admins delete networks" ON public.ad_networks FOR DELETE TO authenticated USING (public.has_role(auth.uid(), 'admin'::app_role));

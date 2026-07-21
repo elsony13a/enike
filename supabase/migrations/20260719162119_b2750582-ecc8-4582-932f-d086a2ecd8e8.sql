@@ -1,0 +1,1 @@
+ALTER TABLE public.ad_networks ADD COLUMN IF NOT EXISTS profit_margin_pct numeric NOT NULL DEFAULT 0;
